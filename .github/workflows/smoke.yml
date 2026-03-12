@@ -1,0 +1,21 @@
+name: Smoke
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: null
+
+jobs:
+  smoke:
+    strategy:
+      matrix:
+        os:
+          - macos
+          - ubuntu
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: cachix/install-nix-action@v31
+      - run: nix build
+      - run: result/bin/linear --version
