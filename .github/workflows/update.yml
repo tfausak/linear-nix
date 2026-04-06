@@ -46,7 +46,7 @@ jobs:
             archive="${archives[$system]}"
             url="https://github.com/schpet/linear-cli/releases/download/v${VERSION}/linear-${archive}.tar.xz"
             hash=$(nix store prefetch-file --json "$url" | jq -r '.hash')
-            sed -i "s|\"${system}\" = \".*\";|\"${system}\" = \"${hash}\";|" flake.nix
+            sed -i "/^      hashes/,/^      };/s|\"${system}\" = \".*\";|\"${system}\" = \"${hash}\";|" flake.nix
           done
 
       - name: Create pull request
