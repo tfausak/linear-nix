@@ -8,21 +8,21 @@
   outputs =
     { self, nixpkgs }:
     let
-      version = "1.11.1";
+      version = "2.0.0";
 
       # Map nix system strings to release archive names
       archiveNames = {
-        "aarch64-darwin" = "aarch64-apple-darwin";
-        "x86_64-darwin" = "x86_64-apple-darwin";
-        "aarch64-linux" = "aarch64-unknown-linux-gnu";
-        "x86_64-linux" = "x86_64-unknown-linux-gnu";
+        "aarch64-darwin" = "sha256-Eh/h7ubZCyLnbk6Yy7YkR07s2XCkpMYi/U1QiJtX2sw=";
+        "x86_64-darwin" = "sha256-cp5nFmxQlMiVFQtnLNOkRh+omYl+HyTbzQfBO7O0jBM=";
+        "aarch64-linux" = "sha256-bDr90Rx8D7kAU9S1OyclK1w1u3XGeTgyNL7yCiVVjqw=";
+        "x86_64-linux" = "sha256-r/tZRnLC8iDO9o+nz+uBOUXEAQeJpLjMLA5GRo/reHA=";
       };
 
       hashes = {
-        "aarch64-darwin" = "sha256-v906DXJ3YgGLX9wnQ6yZN/1wiws99wxz2tas1idEdpQ=";
-        "x86_64-darwin" = "sha256-e8wVVPpWLwTUFc/Qr54Gf/w7MskCEovsRLVEh61t1Qk=";
-        "aarch64-linux" = "sha256-LjVUdCvlcc8+mqfSpIB6L8u+oGPWu8BWx+VB0gHg4ZI=";
-        "x86_64-linux" = "sha256-S7zwxOYXwYmK+zcyuhuvVW8JhXPI5hgaWiyEz7T0gII=";
+        "aarch64-darwin" = "sha256-Eh/h7ubZCyLnbk6Yy7YkR07s2XCkpMYi/U1QiJtX2sw=";
+        "x86_64-darwin" = "sha256-cp5nFmxQlMiVFQtnLNOkRh+omYl+HyTbzQfBO7O0jBM=";
+        "aarch64-linux" = "sha256-bDr90Rx8D7kAU9S1OyclK1w1u3XGeTgyNL7yCiVVjqw=";
+        "x86_64-linux" = "sha256-r/tZRnLC8iDO9o+nz+uBOUXEAQeJpLjMLA5GRo/reHA=";
       };
 
       supportedSystems = builtins.attrNames archiveNames;
