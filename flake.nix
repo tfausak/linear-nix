@@ -8,7 +8,7 @@
   outputs =
     { self, nixpkgs }:
     let
-      version = "2.4.0";
+      version = "2.5.0";
 
       # Map nix system strings to release archive names
       archiveNames = {
@@ -19,10 +19,10 @@
       };
 
       hashes = {
-        "aarch64-darwin" = "sha256-qJTbeJ+vaDPsy6veaB4rzypKzUW9ASMgW/jWvRumkF0=";
-        "x86_64-darwin" = "sha256-Z7X9/Q0voMWwFJONuxopgD4ZXzWIOfhMttjSySaitiU=";
-        "aarch64-linux" = "sha256-PEgztfQbHbIg7uhxS5JYBG1ey8OWMYvzWg6FOI872aY=";
-        "x86_64-linux" = "sha256-msMLoMdc3SUDMDuIMVW9xYjBr4q67rJ1QJG4jNoIksc=";
+        "aarch64-darwin" = "sha256-bRHrWg7iqhDSRiXSPGBb9WmHqUdB5gu5gX+HsSOpoAs=";
+        "x86_64-darwin" = "sha256-9Xx6zJdMG8AcCsFBZYov04DjZ3a4XxXan8vy6CTAgjw=";
+        "aarch64-linux" = "sha256-yN3X+0eP8jzXUgJutgnyXvkcw2yxtVkA258YL0rrR7U=";
+        "x86_64-linux" = "sha256-YqzPHrNsMeiX+EkOgmGC8BK5pLOiwNO/jI3ekGA5w+o=";
       };
 
       supportedSystems = builtins.attrNames archiveNames;
